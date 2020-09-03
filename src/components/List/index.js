@@ -28,7 +28,11 @@ const ParticipantCards = (props) => {
               key={`list_item_${p.id}`}
               onClick={handleClick(p)}
             >
-              <Number>{p.id}</Number>
+              <Number
+                className={p.id === active_participant_id ? "active" : ""}
+              >
+                {p.id}
+              </Number>
               <Name>{p.name}</Name>
             </ListItem>
           );

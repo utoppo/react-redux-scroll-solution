@@ -30,7 +30,7 @@ const FilterItem = styled.div`
   cursor: pointer;
   &.active {
     font-weight: bold;
-    background: blue;
+    background: black;
   }
 `;
 

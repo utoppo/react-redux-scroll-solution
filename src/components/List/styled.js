@@ -22,10 +22,10 @@ const ListContainer = styled.ul`
 `;
 const ListItem = styled.li`
   width: calc(100% - 1rem);
-  height: 40px;
+  height: 60px;
   border-radius: 4px;
   background: #d8b48d;
-  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin: 0rem 0.5rem 2rem 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,30 +34,33 @@ const ListItem = styled.li`
   position: relative;
   flex-wrap: wrap;
   align-content: center;
+  border-radius: 30px;
+
   cursor: pointer;
   &.active {
     background: #ca9b68;
-    background: blue;
+    background: black;
   }
   &:hover {
-    background: blue;
+    background: black;
   }
 `;
 
 const Name = styled.div`
   color: #bc8243;
   font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
 `;
 
 const Number = styled.div`
   position: absolute;
-  left: 0px;
+  left: 30px;
   top: 0px;
   transform: translateX(-50%);
   z-index: 5;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -65,7 +68,13 @@ const Number = styled.div`
   align-items: center;
   background: #bc8243;
   color: #d8b48d;
-  font-size: 16px;
+  color: #bc8243;
+  font-size: 24px;
+  background: transparent;
+  &.active {
+    background: black;
+    background: transparent;
+  }
 `;
 
 export { ListWrap, ListContainer, ListItem, Name, Number };

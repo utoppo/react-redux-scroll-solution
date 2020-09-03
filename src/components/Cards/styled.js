@@ -12,16 +12,16 @@ const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-left: 0rem;
-  padding: 0.5rem 0.5rem;
+  padding: 0rem 1rem;
   overflow-x: hidden;
   background: white;
 `;
 const Card = styled.div`
-  width: calc(50% - 1rem);
-  height: 150px;
+  width: calc(50% - 2rem);
+  height: 200px;
   border-radius: 4px;
   background: #d8b48d;
-  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin: 0rem 1rem 2rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +32,7 @@ const Card = styled.div`
   align-content: center;
   cursor: pointer;
   &.active {
-    background: blue;
+    background: black;
   }
 `;
 
@@ -40,7 +40,7 @@ const Name = styled.div`
   color: #bc8243;
   font-size: 24px;
   font-weight: bold;
-  margin-top: 40px;
+  margin-top: 70px;
 `;
 
 const Category = styled.div`
@@ -55,7 +55,7 @@ const Category = styled.div`
 const Number = styled.div`
   position: absolute;
   left: 50%;
-  top: 12px;
+  top: 32px;
   transform: translateX(-50%);
   z-index: 5;
   width: 36px;

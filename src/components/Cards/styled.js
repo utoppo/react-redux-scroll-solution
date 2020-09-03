@@ -30,7 +30,7 @@ const Card = styled.div`
   position: relative;
   flex-wrap: wrap;
   align-content: center;
-
+  cursor: pointer;
   &.active {
     background: blue;
   }

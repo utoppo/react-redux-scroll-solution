@@ -34,7 +34,7 @@ const ListItem = styled.li`
   position: relative;
   flex-wrap: wrap;
   align-content: center;
-
+  cursor: pointer;
   &.active {
     background: #ca9b68;
     background: blue;

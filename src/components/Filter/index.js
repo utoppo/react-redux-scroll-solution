@@ -26,7 +26,7 @@ const Filter = (props) => {
     }
   };
   return (
-    <FilterWrap>
+    <FilterWrap id="filterbar-header">
       <FilterItem key={`filter_item_all`} onClick={triggerAction(null)}>
         All
       </FilterItem>

@@ -29,6 +29,8 @@ const ParticipantCards = (props) => {
           const category = categories.find((c) => c.id === p.categoryId).name;
           return (
             <FancyCard
+              key={`f_card_${p.id}`}
+              id={`fcard_${p.id}`}
               p={p}
               ref={refs[p.id]}
               setActiveParticipant={setActiveParticipant}

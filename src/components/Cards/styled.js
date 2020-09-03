@@ -14,6 +14,7 @@ const CardContainer = styled.div`
   margin-left: 0rem;
   padding: 0.5rem 0.5rem;
   overflow-x: hidden;
+  background: white;
 `;
 const Card = styled.div`
   width: calc(50% - 1rem);

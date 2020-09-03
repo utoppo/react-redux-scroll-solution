@@ -9,7 +9,10 @@ const FilterWrap = styled.div`
   display: flex;
   align-items: center;
   padding-left: 1rem;
-  background: #e6e6e6;
+  background: #ca9b68;
+  background: white;
+
+  margin-bottom: 20px;
 `;
 const FilterItem = styled.div`
   border-radius: 4px;
@@ -20,9 +23,9 @@ const FilterItem = styled.div`
   display: flex;
   align-items: center;
   font-size: 24px;
-  background: #cccccc;
+  background: #d8b48d;
+  color: #bc8243;
 
-  color: #9d9d9d;
   cursor: pointer;
 `;
 

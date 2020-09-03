@@ -11,7 +11,8 @@ const Filter = (props) => {
     participants
   } = props;
 
-  const triggerAction = (cat) => {
+  const triggerAction = (cat) => (e) => {
+    e.preventDefault();
     if (cat) {
       filterParticipants(cat.id, cat.name);
       const activeParticipant = participants.find(
@@ -26,15 +27,12 @@ const Filter = (props) => {
   };
   return (
     <FilterWrap>
-      <FilterItem key={`filter_item_all`} onClick={() => triggerAction()}>
+      <FilterItem key={`filter_item_all`} onClick={triggerAction(null)}>
         All
       </FilterItem>
       {categories.map((c) => {
         return (
-          <FilterItem
-            key={`filter_item_${c.id}`}
-            onClick={() => triggerAction(c)}
-          >
+          <FilterItem key={`filter_item_${c.id}`} onClick={triggerAction(c)}>
             {c.name}
           </FilterItem>
         );

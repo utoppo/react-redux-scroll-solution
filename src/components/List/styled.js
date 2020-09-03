@@ -12,6 +12,7 @@ const ListContainer = styled.ul`
   padding: 0;
   flex: 1 0 50vw;
   background: #ca9b68;
+  background: white;
   overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;

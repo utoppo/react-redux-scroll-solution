@@ -12,7 +12,6 @@ const ParticipantCards = (props) => {
   } = props;
 
   const handleClick = (participant) => (e) => {
-    console.log("handle click activate participant: ", participant.id);
     setActiveParticipant(participant.id, participant.ref);
   };
 

@@ -8,7 +8,8 @@ const Filter = (props) => {
     filterParticipants,
     setActiveParticipant,
     categories,
-    participants
+    participants,
+    active_category_id
   } = props;
 
   const triggerAction = (cat) => (e) => {
@@ -18,21 +19,30 @@ const Filter = (props) => {
       const activeParticipant = participants.find(
         (p) => p.categoryId === cat.id
       );
-      console.log("new activeParticipant: ", activeParticipant);
       setActiveParticipant(activeParticipant.id);
     } else {
       filterParticipants(null);
       setActiveParticipant(participants[0].id);
     }
   };
+
   return (
     <FilterWrap id="filterbar-header">
-      <FilterItem key={`filter_item_all`} onClick={triggerAction(null)}>
+      <FilterItem
+        key={`filter_item_all`}
+        className={active_category_id ? "" : "active"}
+        onClick={triggerAction(null)}
+      >
         All
       </FilterItem>
       {categories.map((c) => {
+        const active = active_category_id === c.id;
         return (
-          <FilterItem key={`filter_item_${c.id}`} onClick={triggerAction(c)}>
+          <FilterItem
+            className={active ? "active" : ""}
+            key={`filter_item_${c.id}`}
+            onClick={triggerAction(c)}
+          >
             {c.name}
           </FilterItem>
         );
@@ -44,7 +54,8 @@ const Filter = (props) => {
 const mapStateToProps = (state) => {
   return {
     categories: state.all.categories,
-    participants: state.all.participants
+    participants: state.all.participants,
+    active_category_id: state.all.active_category.id
   };
 };
 

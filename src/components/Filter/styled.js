@@ -25,8 +25,13 @@ const FilterItem = styled.div`
   font-size: 24px;
   background: #d8b48d;
   color: #bc8243;
+  background: white;
 
   cursor: pointer;
+  &.active {
+    font-weight: bold;
+    background: blue;
+  }
 `;
 
 export { FilterWrap, FilterItem };

@@ -8,7 +8,6 @@ const Scrolli = ScrollToHOC(function (props) {
 
   useEffect(() => {
     if (active_participant_id) {
-      console.log("useEffect >>> active_participant_id", active_participant_id);
       const headerHeight = document.getElementById("foo").offsetTop;
       const elementTop = refs[active_participant_id].current.offsetTop;
       const scrollToY = elementTop - headerHeight;

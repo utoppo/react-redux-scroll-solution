@@ -4,11 +4,9 @@ import { Card } from "./styled";
 const FancyCard = React.forwardRef((props, ref) => {
   const { active_participant_id, p, id, setActiveParticipant } = props;
   const [isHovered, setHover] = useState(false);
-
   const cardIsActive = active_participant_id === p.id || isHovered;
 
   const handleClick = (participant) => (e) => {
-    console.log("handle click activate participant: ", participant.id);
     setActiveParticipant(participant.id);
   };
 

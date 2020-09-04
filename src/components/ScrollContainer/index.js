@@ -13,7 +13,7 @@ const ScrollContainer = ScrollToHOC(function (props) {
         .getBoundingClientRect().height;
       const elementTop = refs[active_participant_id].current.offsetTop;
 
-      const scrollToY = elementTop - 100;
+      const scrollToY = elementTop;
       console.log(
         "offsetTop: ",
         elementTop,
@@ -42,7 +42,6 @@ const ScrollContainer = ScrollToHOC(function (props) {
         overflow-x: hidden;
         height: 100%;
         width: calc(50vw - 1rem);
-        padding-top: 100px;
       `}
       id="foo"
     >

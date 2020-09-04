@@ -22,7 +22,7 @@ const ListContainer = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin-left: 0rem;
-  padding: 0 2rem;
+  padding: 0 2rem 100px 0;
   overflow-x: hidden;
 `;
 const ListItem = styled.li`

@@ -1,20 +1,12 @@
 import styled from "@emotion/styled";
 
 const CardWrap = styled.div`
-  overflow-x: hidden; /* left and right only */
+  // overflow-x: hidden; /* left and right only */
   flex: 1 0 50vw;
-  height: calc(100vh);
-`;
-const CardContainer = styled.div`
-  flex: 1 0 50vw;
-  background: #ca9b68;
-  overflow-y: scroll;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -4rem;
-  padding: 0rem 1rem;
-  overflow-x: hidden;
-  background: white;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  position: fixed;
+  top: 100px;
 `;
 
 const Name = styled.div`
@@ -51,4 +43,4 @@ const Number = styled.div`
   font-size: 16px;
 `;
 
-export { CardWrap, CardContainer, Name, Category, Number };
+export { CardWrap, Name, Category, Number };

@@ -3,8 +3,13 @@ import styled from "@emotion/styled";
 const ListWrap = styled.div`
   overflow-x: hidden; /* left and right only */
   flex: 1 0 50vw;
-  height: calc(100vh - 80px);
-  padding: 0;
+  height: calc(100vh);
+  padding: 100px 0;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  width: 50vw;
+  right: 0;
 `;
 const ListContainer = styled.ul`
   margin: 0;
@@ -17,7 +22,7 @@ const ListContainer = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin-left: 0rem;
-  padding: 0.5rem 3rem;
+  padding: 0 2rem;
   overflow-x: hidden;
 `;
 const ListItem = styled.li`

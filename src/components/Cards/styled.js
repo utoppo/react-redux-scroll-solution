@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 const CardWrap = styled.div`
   overflow-x: hidden; /* left and right only */
   flex: 1 0 50vw;
-  height: calc(100vh - 80px);
+  height: calc(100vh);
 `;
 const CardContainer = styled.div`
   flex: 1 0 50vw;
@@ -11,13 +11,13 @@ const CardContainer = styled.div`
   overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;
-  margin-left: 0rem;
+  margin-left: -4rem;
   padding: 0rem 1rem;
   overflow-x: hidden;
   background: white;
 `;
 const Card = styled.div`
-  width: calc(50% - 2rem);
+  width: calc(50% - 3rem);
   height: 200px;
   border-radius: 4px;
   background: #d8b48d;

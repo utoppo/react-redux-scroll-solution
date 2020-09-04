@@ -13,6 +13,10 @@ const FilterWrap = styled.div`
   background: white;
 
   margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.75);
+  position: fixed;
+  top: 0;
+  z-index: 10;
 `;
 const FilterItem = styled.div`
   border-radius: 4px;

@@ -8,9 +8,20 @@ const Scrolli = ScrollToHOC(function (props) {
 
   useEffect(() => {
     if (active_participant_id) {
-      const headerHeight = document.getElementById("foo").offsetTop;
+      const headerHeight = document
+        .getElementById("filterbar-header")
+        .getBoundingClientRect().height;
       const elementTop = refs[active_participant_id].current.offsetTop;
-      const scrollToY = elementTop - headerHeight;
+
+      const scrollToY = elementTop - 100;
+      console.log(
+        "offsetTop: ",
+        elementTop,
+        "headerHeight: ",
+        headerHeight,
+        " scrollToY: ",
+        scrollToY
+      );
       scroll({
         id: "foo",
         smooth: true,
@@ -23,15 +34,15 @@ const Scrolli = ScrollToHOC(function (props) {
     <ScrollArea
       css={css`
         flex: 1 0 50vw;
-        background: #ca9b68;
         overflow-y: scroll;
         display: flex;
         flex-wrap: wrap;
-        margin-left: 0rem;
-        padding: 0.5rem 0.5rem;
+        padding-left: 1rem;
+        padding-right: 0rem;
         overflow-x: hidden;
-        background: white;
         height: 100%;
+        width: calc(50vw - 1rem);
+        padding-top: 100px;
       `}
       id="foo"
     >

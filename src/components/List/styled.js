@@ -55,7 +55,7 @@ const Name = styled.div`
 
 const Number = styled.div`
   position: absolute;
-  left: 30px;
+  left: 45px;
   top: 0px;
   transform: translateX(-50%);
   z-index: 5;

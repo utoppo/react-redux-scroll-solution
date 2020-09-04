@@ -4,7 +4,7 @@ import "./styles.css";
 import styled from "@emotion/styled";
 import store from "./state/createStore";
 import CardHolder from "./components/CardHolder";
-import FilterBar from "./components/Filter";
+import FilterBar from "./components/FilterBar";
 import List from "./components/List";
 
 const Wrapper = styled.div`

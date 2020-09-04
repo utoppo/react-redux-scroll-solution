@@ -8,7 +8,7 @@ const FilterWrap = styled.div`
   flex: 1 0 100vw;
   display: flex;
   align-items: center;
-  padding-left: 1rem;
+  padding-left: 2rem;
   background: #ca9b68;
   background: white;
 

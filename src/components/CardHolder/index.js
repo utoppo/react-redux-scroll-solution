@@ -2,10 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 import { setActiveParticipant, filterParticipants } from "../../state/actions";
 import { CardWrap, Category, Name, Number } from "./styled";
-import Scrolli from "./Scrolli";
-import FancyCard from "./FancyCard";
+import ScrollContainer from "../ScrollContainer";
+import FancyCard from "../FancyCard";
 
-const ParticipantCards = (props) => {
+const CardHolder = (props) => {
   const {
     participants,
     categories,
@@ -24,7 +24,10 @@ const ParticipantCards = (props) => {
     : participants;
   return (
     <CardWrap>
-      <Scrolli active_participant_id={active_participant_id} refs={refs}>
+      <ScrollContainer
+        active_participant_id={active_participant_id}
+        refs={refs}
+      >
         {activeParticipans.map((p) => {
           const category = categories.find((c) => c.id === p.categoryId).name;
           return (
@@ -42,7 +45,7 @@ const ParticipantCards = (props) => {
             </FancyCard>
           );
         })}
-      </Scrolli>
+      </ScrollContainer>
     </CardWrap>
   );
 };
@@ -61,4 +64,4 @@ const mapDispatchToProps = {
   filterParticipants
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ParticipantCards);
+export default connect(mapStateToProps, mapDispatchToProps)(CardHolder);

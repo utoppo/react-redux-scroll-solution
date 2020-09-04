@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { ScrollToHOC, ScrollArea } from "react-scroll-to";
 import { css, jsx } from "@emotion/core";
 
-const Scrolli = ScrollToHOC(function (props) {
+const ScrollContainer = ScrollToHOC(function (props) {
   const { children, scroll, active_participant_id, refs } = props;
 
   useEffect(() => {
@@ -51,4 +51,4 @@ const Scrolli = ScrollToHOC(function (props) {
   );
 });
 
-export { Scrolli as default };
+export { ScrollContainer as default };

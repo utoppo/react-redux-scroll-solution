@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { FilterWrap, FilterItem } from "./styled";
 import { filterParticipants, setActiveParticipant } from "../../state/actions";
 
-const Filter = (props) => {
+const FilterBar = (props) => {
   const {
     filterParticipants,
     setActiveParticipant,
@@ -64,4 +64,4 @@ const mapDispatchToProps = {
   setActiveParticipant
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Filter);
+export default connect(mapStateToProps, mapDispatchToProps)(FilterBar);

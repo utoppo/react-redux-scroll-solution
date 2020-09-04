@@ -16,25 +16,6 @@ const CardContainer = styled.div`
   overflow-x: hidden;
   background: white;
 `;
-const Card = styled.div`
-  width: calc(50% - 3rem);
-  height: 200px;
-  border-radius: 4px;
-  background: #d8b48d;
-  margin: 0rem 1rem 2rem 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #bc8243;
-  position: relative;
-  flex-wrap: wrap;
-  align-content: center;
-  cursor: pointer;
-  &.active {
-    background: black;
-  }
-`;
 
 const Name = styled.div`
   color: #bc8243;
@@ -70,4 +51,4 @@ const Number = styled.div`
   font-size: 16px;
 `;
 
-export { CardWrap, CardContainer, Card, Name, Category, Number };
+export { CardWrap, CardContainer, Name, Category, Number };
